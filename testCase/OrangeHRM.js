@@ -12,7 +12,7 @@ const AdminUserName = Selector("#searchSystemUser_userName")
 const searchBtn = Selector("#searchBtn")
 const resetBtn = Selector("#resetBtn")
 
-fixture `DemoQA`
+fixture `OrangeHRM`
     .page `https://opensource-demo.orangehrmlive.com/`;
     
 

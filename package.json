@@ -5,8 +5,8 @@
   "main": "demoqa.js",
   "scripts": {
     "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js",
-    "testDemoqa": "testcafe chrome testCase/Demoqa.js",
-    "testVideos" : "testcafe chrome testCase/demoqa.js --video D:/testCafeGlobal/videos"
+    "testDemoqa": "testcafe chrome testCase/Demoqa.js"
+    
   },
   "repository": {
     "type": "git",

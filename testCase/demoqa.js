@@ -1,4 +1,4 @@
-import {  Selector } from "testcafe";
+import { Selector } from "testcafe";
 
 const fullName = Selector('#userName')
 const userEmail = Selector('#userEmail')
@@ -12,11 +12,11 @@ const email = Selector('#email')
 
 
 fixture `DemoQA`
-    .page `https://demoqa.com/`;
-    
-
-test.page `https://demoqa.com/text-box`('TextBox page', async t => {
-    await t.typeText(fullName,"Bharath Challa")
+   
+test.page `https://demoqa.com/text-box`('TextBoxpage', async t => {
+    await t
+    .click(fullName)
+    .typeText(fullName,"Bharath Challa")
     .typeText(userEmail,"bharaths@suntechnologies.com")
     .typeText(currentAddress,"Bangalore")
     .typeText(permanentAddress,"Kadapa (AP)")
@@ -28,19 +28,3 @@ test.page `https://demoqa.com/text-box`('TextBox page', async t => {
 
 });
 
-test.skip('Test2', async t => {
-    await t
-    .maximizeWindow()
-    .typeText(userName, "Admin")
-    .typeText(password, "admin123")
-    .click(clickOnLogin)
-    .expect(Welcome.textContent).contains('Welcome')
-    .expect(verifyDashboard.textContent).contains('Dashboard')
-    .click(AdminMenu)
-    .typeText(AdminUserName, "Aishu")
-    .click(searchBtn)
-    .click(resetBtn)
-    .click(Welcome)
-    .click(Logout)
-
-});
