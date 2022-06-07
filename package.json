@@ -4,7 +4,8 @@
   "description": "first project",
   "main": "demoqa.js",
   "scripts": {
-    "test": "testcafe firefox testCase/",
+    "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js",
+    "testDemoqa": "testcafe chrome testCase/Demoqa.js",
     "testVideos" : "testcafe chrome testCase/demoqa.js --video D:/testCafeGlobal/videos"
   },
   "repository": {

@@ -1,35 +1,34 @@
 import {  Selector } from "testcafe";
 
+const fullName = Selector('#userName')
+const userEmail = Selector('#userEmail')
+const currentAddress = Selector('#currentAddress')
+const permanentAddress = Selector('#permanentAddress')
+const currentAddressVerify = Selector('#currentAddress').nth(1)
+const submitBtn = Selector('#submit')
+const name = Selector('#name')
+const email = Selector('#email')
 
-const userName = Selector('#txtUsername')
-const password = Selector('#txtPassword')
-const clickOnLogin = Selector('#btnLogin')
-const Welcome = Selector('#welcome')
-const verifyDashboard = Selector('.head')
-const Logout = Selector('li a[href="/index.php/auth/logout"]')
-const AdminMenu = Selector("#menu_admin_viewAdminModule")
-const AdminUserName = Selector("#searchSystemUser_userName")
-const searchBtn = Selector("#searchBtn")
-const resetBtn = Selector("#resetBtn")
+
 
 fixture `DemoQA`
-    .page `https://opensource-demo.orangehrmlive.com/`;
+    .page `https://demoqa.com/`;
     
 
-test('Test1', async t => {
-    await t
-    .maximizeWindow()
-    .typeText(userName, "Admin")
-    .typeText(password, "admin123")
-    .click(clickOnLogin)
-    .expect(Welcome.textContent).contains('Welcome')
-    .expect(verifyDashboard.textContent).contains('Dashboard')
-    .click(Welcome)
-    .click(Logout)
+test.page `https://demoqa.com/text-box`('TextBox page', async t => {
+    await t.typeText(fullName,"Bharath Challa")
+    .typeText(userEmail,"bharaths@suntechnologies.com")
+    .typeText(currentAddress,"Bangalore")
+    .typeText(permanentAddress,"Kadapa (AP)")
+    .click(submitBtn)
+    .expect(name.textContent).contains('Bharath Challa')
+    .expect(email.textContent).contains('bharaths@suntechnologies.com')
+    .expect(currentAddressVerify.textContent).contains('bharaths@suntechnologies.com')
+   
 
 });
 
-test('Test2', async t => {
+test.skip('Test2', async t => {
     await t
     .maximizeWindow()
     .typeText(userName, "Admin")
