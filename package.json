@@ -7,7 +7,6 @@
     "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js",
     "testDemoqa": "testcafe chrome testCase/Demoqa.js --skip-js-errors",
     "testEbank": "testcafe chrome testCase/Ebank.js"
-    
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/bharath9856/bharath9856/issues"
   },
-  "homepage": "https://github.com/bharath9856/bharath9856#readme"
+  "homepage": "https://github.com/bharath9856/bharath9856#readme",
+  "devDependencies": {
+    "testcafe": "^1.19.0"
+  }
 }
