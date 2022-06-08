@@ -73,10 +73,10 @@
       <div class="client-logo" style="padding:15px"></div>
       <div class="bg-primary" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
         <h3>Summary</h3><br>
-        <p class="lead">Start Time: Wed Jun 08 2022 20:13:46 GMT+0530 (India Standard Time)</p>
+        <p class="lead">Start Time: Wed Jun 08 2022 23:27:22 GMT+0530 (India Standard Time)</p>
         <p class="lead">Browsers: Chrome 102.0.5005.63 / Windows 10</p>
-        <p class="lead">Duration: 23s</p>
-        <p class="lead">Tests Failed: 1 out of 2</p>
+        <p class="lead">Duration: 43s</p>
+        <p class="lead">Tests Failed: 2 out of 2</p>
         <p class="lead">Tests Skipped: 0</p>
       </div><br>
       <table class="table sortable" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
@@ -91,20 +91,20 @@
           </tr>
         </thead>
         <tbody>
-           <tr class="success">
+           <tr class="danger">
   <td>1</td>
   <td>PRMS</td>
   <td>Test1</td>
   <td>Chrome 102.0.5005.63 / Windows 10</td>
-  <td>10s</td>
-  <td>passed</td>
+  <td>21s</td>
+  <td><a href="#test-1">failed</a></td>
  </tr>
  <tr class="danger">
   <td>2</td>
   <td>PRMS</td>
   <td>Test2</td>
   <td>Chrome 102.0.5005.63 / Windows 10</td>
-  <td>13s</td>
+  <td>21s</td>
   <td><a href="#test-2">failed</a></td>
  </tr>
 
@@ -122,31 +122,63 @@
       </table>
       <br>
       <h3>Error Details</h3>
-       <h4 id="test-2" style="color: red;">2. PRMS - Test2</h4>
- <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">Cannot obtain information about the node because the specified selector does not match any node in the DOM tree.
+       <h4 id="test-1" style="color: red;">1. PRMS - Test1</h4>
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">Failed to load the page at &quot;http://172.16.29.172:4200/&quot;.
+Increase the value of the &quot;pageRequestTimeout&quot; variable, enable the &quot;retryTestPages&quot; option, or use quarantine mode to perform additional attempts to execute this test.
+You can find troubleshooting information for this issue at &quot;https://go.devexpress.com/TestCafe_FAQ_ARequestHasFailed.aspx&quot;.
 
- &gt; | Selector(&#39;p.username&#39;)
+Error details:
+Failed to perform a request to the resource at &quot;http://172.16.29.172:4200/&quot; because of an error.
+Error: connect ETIMEDOUT 172.16.29.172:4200
 
 Browser: Chrome 102.0.5005.63 / Windows 10
 
-   34 |    await t
-   35 |    .maximizeWindow()
-   36 |    .typeText(userName, &quot;Admin&quot;)
-   37 |    .typeText(password, &quot;admin123&quot;)
-   38 |    .click(clickOnLogin)
- &gt; 39 |    .expect(Welcome.textContent).contains(&#39;Welcome&#39;)
-   40 |    .expect(verifyDashboard.textContent).contains(&#39;Dashboard&#39;)
-   41 |    .click(ClientMenu)
-   42 |    .typeText(AdminUserName, &quot;Aishu&quot;)
-   43 |    .click(searchBtn)
-   44 |    .click(resetBtn)
+   24 |    .page `http://172.16.29.172:4200/#/login`;
+   25 |    
+   26 |
+   27 |test(&#39;Test1&#39;, async t =&gt; &#123
+   28 |    await t
+ &gt; 29 |    .maximizeWindow()
+   30 |    .typeText(userName, &quot;bharaths&quot;)
+   31 |    .typeText(password, &quot;India@123&quot;)
+   32 |    .click(clickOnLogin)
+   33 |    .expect(Welcome.textContent).contains(&#39;Welcome&#39;)
+   34 |    .click(LogoutArrow)
 
-   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:39:34)
+   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:29:6)
    at asyncGeneratorStep (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:251)
    at _next (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:589)
    at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:754)
    at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:495)
-   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:33:5) </pre><br>
+   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:27:5) </pre><br> <h4 id="test-2" style="color: red;">2. PRMS - Test2</h4>
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">Failed to load the page at &quot;http://172.16.29.172:4200/&quot;.
+Increase the value of the &quot;pageRequestTimeout&quot; variable, enable the &quot;retryTestPages&quot; option, or use quarantine mode to perform additional attempts to execute this test.
+You can find troubleshooting information for this issue at &quot;https://go.devexpress.com/TestCafe_FAQ_ARequestHasFailed.aspx&quot;.
+
+Error details:
+Failed to perform a request to the resource at &quot;http://172.16.29.172:4200/&quot; because of an error.
+Error: connect ETIMEDOUT 172.16.29.172:4200
+
+Browser: Chrome 102.0.5005.63 / Windows 10
+
+   36 |
+   37 |&#125);
+   38 |
+   39 |test(&#39;Test2&#39;, async t =&gt; &#123
+   40 |    await t
+ &gt; 41 |    .maximizeWindow()
+   42 |    .typeText(userName, &quot;bharaths&quot;)
+   43 |    .typeText(password, &quot;India@123&quot;)
+   44 |    .click(clickOnLogin)
+   45 |    .expect(Welcome.textContent).contains(&#39;Welcome&#39;)
+   46 |    .click(ClientMenu)
+
+   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:41:6)
+   at asyncGeneratorStep (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:251)
+   at _next (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:589)
+   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:754)
+   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:1:495)
+   at &lt;anonymous&gt; (C:\Users\bharaths\Documents\GitHub\testCafeGlobal\testCase\PRMS.js:39:5) </pre><br>
     </div>
     <script>
       const modal = document.getElementById('myModal');
