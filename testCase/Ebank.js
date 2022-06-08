@@ -4,10 +4,6 @@ import {  Selector } from "testcafe";
 const userName = Selector('[placeholder="Enter username or email address"]')
 const password = Selector('[placeholder="Enter password"]')
 const signIN = Selector('button[type="submit"]')
-//const Transfer = Selector('label').withText("Transfers")
-const Transfer = Selector(() => {
-    return document.getElementsByClassName('.aside__label.main_color.transfer')
-})
 const TransferCards = Selector(".sections-container").withText('Transfer Between Accounts');
 
 
