@@ -4,7 +4,7 @@
   "description": "first project",
   "main": "demoqa.js",
   "scripts": {
-    "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js",
+    "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js --skip-js-errors --reporter html:Result/report.html",
     "testDemoqa": "testcafe chrome testCase/Demoqa.js --skip-js-errors",
     "testEbank": "testcafe chrome testCase/Ebank.js"
   },
