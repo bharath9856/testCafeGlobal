@@ -20,5 +20,8 @@
   "homepage": "https://github.com/bharath9856/bharath9856#readme",
   "devDependencies": {
     "testcafe": "^1.19.0"
+  },
+  "dependencies": {
+    "testcafe-reporter-html": "^1.4.6"
   }
 }
