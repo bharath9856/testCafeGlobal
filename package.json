@@ -6,7 +6,8 @@
   "scripts": {
     "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js --skip-js-errors --reporter html:Result/report.html",
     "testDemoqa": "testcafe chrome testCase/Demoqa.js --skip-js-errors --reporter html:Result/report.html",
-    "testEbank": "testcafe chrome testCase/Ebank.js"
+    "testEbank": "testcafe chrome testCase/Ebank.js",
+    "testPRMS": "testcafe chrome testCase/PRMS.js --skip-js-errors --reporter html:Result/report.html"
   },
   "repository": {
     "type": "git",
