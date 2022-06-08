@@ -23,8 +23,10 @@ test.page `https://demoqa.com/text-box`('TextBoxpage', async t => {
     .click(submitBtn)
     .expect(name.textContent).contains('Bharath Challa')
     .expect(email.textContent).contains('bharaths@suntechnologies.com')
-    .expect(currentAddressVerify.textContent).contains('bharaths@suntechnologies.com')
+    .expect(currentAddressVerify.textContent).contains('Bangalore')
    
 
 });
+
+
 

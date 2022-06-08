@@ -5,7 +5,7 @@
   "main": "demoqa.js",
   "scripts": {
     "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js",
-    "testDemoqa": "testcafe chrome testCase/Demoqa.js"
+    "testDemoqa": "testcafe chrome testCase/Demoqa.js --skip-js-errors"
     
   },
   "repository": {
