@@ -1,0 +1,14 @@
+# Project description file
+
+project.name=DEMO_HRM
+project.version=8.4
+project.original.version=8.4
+product.name=NeoLoad
+product.original.name=NeoLoad
+product.version=8.1.1
+product.original.version=8.1.1
+project.is-open-test-settings-after-upload=false
+project.id=a7ccf892-f573-49bc-b10f-cfc71a0acf02
+project.config.path=config.zip
+project.config.storage=ZIP
+team.server.enabled=false
