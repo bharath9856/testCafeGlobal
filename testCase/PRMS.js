@@ -1,43 +1,59 @@
-
-import prmsObjects from "../pageObjectModel/prmsObjects";
-
+import LoginPage from "../pageObjectModel/loginPage";
+import common from "../pageObjectModel/common";
+// import Logout from "../pageObjectModel/logout";
+// import DashboardPage from "../pageObjectModel/dashboardPage";
 
 fixture `PRMS`
-    .page `http://172.16.29.172:4200/#/login`;
+    .page `http://172.16.29.172:4200/#/login`
+    
     
 
-test('Test1', async t => {
-    await t
-    .maximizeWindow()
-    .typeText(prmsObjects.userName, "bharaths")
-    .typeText(prmsObjects.password, "India@123")
-    .click(prmsObjects.clickOnLogin)
-    .expect(prmsObjects.Welcome.textContent).contains('Welcome')
-    .click(prmsObjects.LogoutArrow)
-    .click(prmsObjects.Logout)
+test('Test1', async t => { 
+    //common.maximumWindow();
+    LoginPage.setUsername("bharaths");
+    LoginPage.setPassword("India@123");
+    LoginPage.LoginBTN();
+    common.WaitSec(5000);
+    
+    // await t
+    // .expect(DashboardPage.Welcome.textContent).contains('Welcome');
+
+    // Logout.clickLogoutArrow();
+    // common.wait(1000);
+    // Logout.clickLogout();
 
 });
 
 test('Test2', async t => {
-    await t
-    .maximizeWindow()
-    .typeText(prmsObjects.userName, "bharaths")
-    .typeText(prmsObjects.password, "India@123")
-    .click(prmsObjects.clickOnLogin)
-    .expect(prmsObjects.Welcome.textContent).contains('Welcome')
-    .click(prmsObjects.ClientMenu)
-    .expect(prmsObjects.ClientMenu.textContent).contains('Client')
-    .click(prmsObjects.Add)
-    .typeText(prmsObjects.clientName,"abcd")
-    .typeText(prmsObjects.address,'bangalore')
-    .click(prmsObjects.country)
-    .click(prmsObjects.countryOption.withText('Afghanistan'))
-    .typeText(prmsObjects.location,'bangalore')
-    .click(prmsObjects.status)
-    .click(prmsObjects.statusOption.withText('Active'))
-    .click(prmsObjects.save)
-    .click(prmsObjects.ok)
-    .click(prmsObjects.LogoutArrow)
-    .click(prmsObjects.Logout)
+
+    
+    // common.maximumWindow();
+    // LoginPage.setUsername("bharaths");
+    // LoginPage.setPassword("India@123");
+    // LoginPage.LoginBTN();
+    
+    // await t
+    // .expect(DashboardPage.Welcome.textContent).contains('Welcome');
+    
+    // common.wait(1000);
+    // DashboardPage.clickOnClientMenu();
+    
+    // await t
+    // .expect(DashboardPage.ClientMenu.textContent).contains('Client');
+    
+    // common.wait(1000);
+    // DashboardPage.AddBtn();
+    // DashboardPage.setClientName("abcd");
+    // DashboardPage.setAddress('bangalore');
+    // DashboardPage.clickOnCountry();
+    // DashboardPage.selectCountryOption('Afghanistan');
+    // DashboardPage.setLocation('bangalore');
+    // DashboardPage.clickOnStatus();
+    // DashboardPage.selectStatus('Active');
+    // DashboardPage.clickOnSave();
+    // DashboardPage.clickOnOk();
+    // Logout.clickLogoutArrow();
+    // common.wait(1000);
+    // Logout.clickLogout();
 
 });

@@ -1,0 +1,45 @@
+import { Selector, t } from "testcafe"
+
+
+
+
+class LoginPage{
+    constructor(){
+        this.userName = Selector('#username');
+        this.password = Selector('#password');
+        this.clickOnLogin = Selector('button[type="submit"]');
+        this.Welcome = Selector('p.username');
+        this.LogoutArrow = Selector('#navbarDropdown');
+        this.Logout = Selector('.dropdown-menu.show');
+        this.ClientMenu = Selector("a[href='#/viewClient']");
+        this.Add = Selector("button.btn.btn-success.text-center.mr-1.ng-star-inserted");
+        this.clientName =Selector("#name");
+        this.address = Selector('#address');
+        this.country = Selector('#country');
+        this.countryOption = this.country.find('option');
+        this.status = Selector('#status');
+        this.statusOption = this.status.find('option');
+        this.location = Selector('#location');
+        this.save = Selector('button[type="save"]');
+        this.ok = Selector('button[type="submit"]');
+
+    }
+
+    async setUsername(name){
+        await t 
+        .typeText(this.userName,name)
+        
+    }
+    async setPassword(name){
+        await t 
+        .typeText(this.userName,name)
+        
+    }
+    async LoginBTN(){
+        await t 
+        .click(this.userName)
+    }
+   
+    
+}
+export default new LoginPage();
