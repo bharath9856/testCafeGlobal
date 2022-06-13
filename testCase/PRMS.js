@@ -1,23 +1,8 @@
 import {  Selector } from "testcafe";
+import prmsLoginPage from "../pageObjectModel/prmsLoginPage.js";
 
 
-const userName = Selector('#username')
-const password = Selector('#password')
-const clickOnLogin = Selector('button[type="submit"]')
-const Welcome = Selector('p.username')
-const LogoutArrow = Selector('#navbarDropdown')
-const Logout = Selector('.dropdown-menu.show')
-const ClientMenu = Selector("a[href='#/viewClient']")
-const Add = Selector("button.btn.btn-success.text-center.mr-1.ng-star-inserted")
-const clientName =Selector("#name")
-const address = Selector('#address')
-const country = Selector('#country')
-const countryOption = country.find('option')
-const status = Selector('#status')
-const statusOption = status.find('option')
-const location = Selector('#location')
-const save = Selector('button[type="save"]')
-const ok = Selector('button[type="submit"]')
+
 
 
 fixture `PRMS`
@@ -27,12 +12,12 @@ fixture `PRMS`
 test('Test1', async t => {
     await t
     .maximizeWindow()
-    .typeText(userName, "bharaths")
-    .typeText(password, "India@123")
-    .click(clickOnLogin)
-    .expect(Welcome.textContent).contains('Welcome')
-    .click(LogoutArrow)
-    .click(Logout)
+    .typeText(prmsLoginPage.userName, "bharaths")
+    .typeText(prmsLoginPage.password, "India@123")
+    .click(prmsLoginPage.clickOnLogin)
+    .expect(prmsLoginPage.Welcome.textContent).contains('Welcome')
+    .click(prmsLoginPage.LogoutArrow)
+    .click(prmsLoginPage.Logout)
 
 });
 
