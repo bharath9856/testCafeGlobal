@@ -2,7 +2,6 @@ import LoginPage from "../pageObjectModel/loginPage";
 import Common from "../pageObjectModel/common";
 import Logout from "../pageObjectModel/logout";
 import DashboardPage from "../pageObjectModel/dashboardPage";
-import common from "../pageObjectModel/common";
 
 fixture `PRMS`
     .page `http://172.16.29.172:4200/#/login`;
