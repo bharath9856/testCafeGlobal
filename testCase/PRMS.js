@@ -9,7 +9,7 @@ fixture `PRMS`
     
 
 test('Test1', async t => { 
-    //common.maximumWindow();
+    common.maximumWindow();
     LoginPage.setUsername("bharaths");
     LoginPage.setPassword("India@123");
     LoginPage.LoginBTN();
