@@ -3,7 +3,7 @@ import { Selector, t } from "testcafe"
 
 
 
-class LoginPage{
+class PRMSObjects{
     constructor(){
         this.userName = Selector('#username');
         this.password = Selector('#password');
@@ -24,9 +24,5 @@ class LoginPage{
         this.ok = Selector('button[type="submit"]');
 
     }
-    async enterUsername(){
-        await t 
-        .typeText(this.userName)
-    }
 }
-export default new LoginPage();
+export default new PRMSObjects();

@@ -1,8 +1,5 @@
 
-import prmsLoginPage from "../pageObjectModel/prmsLoginPage";
-
-
-
+import prmsObjects from "../pageObjectModel/prmsObjects";
 
 
 fixture `PRMS`
@@ -12,35 +9,35 @@ fixture `PRMS`
 test('Test1', async t => {
     await t
     .maximizeWindow()
-    .typeText(prmsLoginPage.userName, "bharaths")
-    .typeText(prmsLoginPage.password, "India@123")
-    .click(prmsLoginPage.clickOnLogin)
-    .expect(prmsLoginPage.Welcome.textContent).contains('Welcome')
-    .click(prmsLoginPage.LogoutArrow)
-    .click(prmsLoginPage.Logout)
+    .typeText(prmsObjects.userName, "bharaths")
+    .typeText(prmsObjects.password, "India@123")
+    .click(prmsObjects.clickOnLogin)
+    .expect(prmsObjects.Welcome.textContent).contains('Welcome')
+    .click(prmsObjects.LogoutArrow)
+    .click(prmsObjects.Logout)
 
 });
 
 test('Test2', async t => {
     await t
     .maximizeWindow()
-    .typeText(prmsLoginPage.userName, "bharaths")
-    .typeText(prmsLoginPage.password, "India@123")
-    .click(prmsLoginPage.clickOnLogin)
-    .expect(prmsLoginPage.Welcome.textContent).contains('Welcome')
-    .click(prmsLoginPage.ClientMenu)
-    .expect(prmsLoginPage.ClientMenu.textContent).contains('Client')
-    .click(prmsLoginPage.Add)
-    .typeText(prmsLoginPage.clientName,"abcd")
-    .typeText(prmsLoginPage.address,'bangalore')
-    .click(prmsLoginPage.country)
-    .click(prmsLoginPage.countryOption.withText('Afghanistan'))
-    .typeText(prmsLoginPage.location,'bangalore')
-    .click(prmsLoginPage.status)
-    .click(prmsLoginPage.statusOption.withText('Active'))
-    .click(prmsLoginPage.save)
-    .click(prmsLoginPage.ok)
-    .click(prmsLoginPage.LogoutArrow)
-    .click(prmsLoginPage.Logout)
+    .typeText(prmsObjects.userName, "bharaths")
+    .typeText(prmsObjects.password, "India@123")
+    .click(prmsObjects.clickOnLogin)
+    .expect(prmsObjects.Welcome.textContent).contains('Welcome')
+    .click(prmsObjects.ClientMenu)
+    .expect(prmsObjects.ClientMenu.textContent).contains('Client')
+    .click(prmsObjects.Add)
+    .typeText(prmsObjects.clientName,"abcd")
+    .typeText(prmsObjects.address,'bangalore')
+    .click(prmsObjects.country)
+    .click(prmsObjects.countryOption.withText('Afghanistan'))
+    .typeText(prmsObjects.location,'bangalore')
+    .click(prmsObjects.status)
+    .click(prmsObjects.statusOption.withText('Active'))
+    .click(prmsObjects.save)
+    .click(prmsObjects.ok)
+    .click(prmsObjects.LogoutArrow)
+    .click(prmsObjects.Logout)
 
 });
