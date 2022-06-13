@@ -16,14 +16,17 @@ class LoginPage{
         this.clientName =Selector("#name");
         this.address = Selector('#address');
         this.country = Selector('#country');
-        this.countryOption = country.find('option');
+        this.countryOption = this.country.find('option');
         this.status = Selector('#status');
         this.statusOption = this.status.find('option');
         this.location = Selector('#location');
         this.save = Selector('button[type="save"]');
         this.ok = Selector('button[type="submit"]');
 
-
+    }
+    async enterUsername(){
+        await t 
+        .typeText(this.userName)
     }
 }
 export default new LoginPage();

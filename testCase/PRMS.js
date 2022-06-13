@@ -1,5 +1,5 @@
-import {  Selector } from "testcafe";
-import prmsLoginPage from "../pageObjectModel/prmsLoginPage.js";
+
+import prmsLoginPage from "../pageObjectModel/prmsLoginPage";
 
 
 
