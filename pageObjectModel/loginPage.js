@@ -27,19 +27,15 @@ class LoginPage{
 
     async setUsername(name){
         await t 
-        .typeText(this.userName,name)
-        
+        .typeText(this.userName,name) 
     }
     async setPassword(name){
         await t 
         .typeText(this.userName,name)
-        
     }
     async LoginBTN(){
         await t 
         .click(this.userName)
     }
-   
-    
 }
 export default new LoginPage();
