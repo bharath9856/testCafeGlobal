@@ -21,8 +21,7 @@ test('Test1', async t => {
      Logout.clickLogoutArrow();
      await t
      .wait(3000);
-    
-     Logout.clickLogout();
+    Logout.clickLogout();
 
 });
 
