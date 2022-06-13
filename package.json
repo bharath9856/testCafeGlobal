@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/bharath9856/bharath9856#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^8.3.0",
     "cucumber": "^6.0.7",
     "testcafe": "^1.19.0"
   },
