@@ -8,34 +8,19 @@ class LoginPage{
         this.userName = Selector('#username');
         this.password = Selector('#password');
         this.clickOnLogin = Selector('button[type="submit"]');
-        this.Welcome = Selector('p.username');
-        this.LogoutArrow = Selector('#navbarDropdown');
-        this.Logout = Selector('.dropdown-menu.show');
-        this.ClientMenu = Selector("a[href='#/viewClient']");
-        this.Add = Selector("button.btn.btn-success.text-center.mr-1.ng-star-inserted");
-        this.clientName =Selector("#name");
-        this.address = Selector('#address');
-        this.country = Selector('#country');
-        this.countryOption = this.country.find('option');
-        this.status = Selector('#status');
-        this.statusOption = this.status.find('option');
-        this.location = Selector('#location');
-        this.save = Selector('button[type="save"]');
-        this.ok = Selector('button[type="submit"]');
-
     }
 
-    async setUsername(name){
+    async setUsername(userName){
         await t 
-        .typeText(this.userName,name) 
+        .typeText(this.userName,userName);
     }
-    async setPassword(name){
+    async setPassword(pass){
         await t 
-        .typeText(this.userName,name)
+        .typeText(this.password,pass);
     }
     async LoginBTN(){
         await t 
-        .click(this.userName)
+        .click(this.clickOnLogin);
     }
 }
 export default new LoginPage();

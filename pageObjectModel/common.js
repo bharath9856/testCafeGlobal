@@ -1,14 +1,21 @@
-import { selector,t } from "testcafe"
+
+import { Selector, t } from "testcafe"
+
+
+
 
 class common{
+    constructor(){
+    }
 
-    async maximumWindow(){
-    await t 
+    async sleep(){
+        await t
+        .wait(1000);
+    }
+    async windowMax(){
+        await t 
         .maximizeWindow();
     }
-    async WaitSec(sec){
-        await t 
-        .wait(sec);
-    }
+    
 }
-export default new common();    
+export default new common(); 
