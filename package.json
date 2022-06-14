@@ -7,8 +7,7 @@
     "testOrangeHRM": "testcafe chrome testCase/OrangeHRM.js --skip-js-errors --reporter html:Result/report.html",
     "testDemoqa": "testcafe chrome testCase/Demoqa.js --skip-js-errors --reporter html:Result/report.html",
     "testEbank": "testcafe chrome testCase/Ebank.js",
-    "testPRMS": "testcafe chrome testCase/PRMS.js --skip-js-errors --video Videos/video.mp4 --reporter html:Result/report.html",
-    "video": "testcafe chrome testCase/PRMS.js --video artifacts/videos --video-options singleFile=true,failedOnly=true,pathPattern=${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.mp4"
+    "testPRMS": "testcafe chrome testCase/PRMS.js --skip-js-errors --video Videos/video.mp4 --reporter html:Result/report.html"
   },
   "repository": {
     "type": "git",

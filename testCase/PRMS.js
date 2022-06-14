@@ -6,8 +6,6 @@ import DashboardPage from "../pageObjectModel/dashboardPage";
 fixture `PRMS`
     .page `http://172.16.29.172:4200/#/login`;
 
-    
-
 
 test('Test1', async t => { 
     Common.windowMax();
