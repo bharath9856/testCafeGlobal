@@ -20,7 +20,8 @@ class LoginPage{
     }
     async LoginBTN(){
         await t 
-        .click(this.clickOnLogin);
+        .click(this.clickOnLogin)
+        .takeScreenshot();
     }
 }
 export default new LoginPage();

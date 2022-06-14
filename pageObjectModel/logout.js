@@ -15,6 +15,7 @@ class Logout{
     }
     async clickLogout(){
         await t 
+        .takeScreenshot()
         .click(this.Logout);
     }
 }

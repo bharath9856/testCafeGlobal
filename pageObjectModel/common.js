@@ -8,14 +8,13 @@ class common{
     constructor(){
     }
 
-    async sleep(){
-        await t
-        .wait(1000);
-    }
+    
     async windowMax(){
         await t 
         .maximizeWindow();
     }
-    
+    async sleep(time){
+        await t.wait(time);
+    }
 }
 export default new common(); 

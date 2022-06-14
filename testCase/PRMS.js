@@ -6,6 +6,9 @@ import DashboardPage from "../pageObjectModel/dashboardPage";
 fixture `PRMS`
     .page `http://172.16.29.172:4200/#/login`;
 
+    
+
+
 test('Test1', async t => { 
     Common.windowMax();
     LoginPage.setUsername("bharaths");
@@ -18,6 +21,7 @@ test('Test1', async t => {
     Logout.clickLogoutArrow();
     await t
     .wait(3000);
+    
     Logout.clickLogout();
 
 });
@@ -31,7 +35,8 @@ test('Test2', async t => {
     LoginPage.LoginBTN();
     
     await t
-    .expect(DashboardPage.Welcome.textContent).contains('Welcome');
+    .expect(DashboardPage.Welcome.textContent).contains('Welcome')
+    .takeScreenshot();
     
     DashboardPage.clickOnClientMenu();
 
